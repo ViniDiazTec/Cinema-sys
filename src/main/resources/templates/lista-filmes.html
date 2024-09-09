@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de Filmes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Lista de Filmes</h1>
+        <ul>
+            <li th:each="filme : ${filmes}">
+                <a th:href="@{'/filmes/' + ${filme.id}}" th:text="${filme.titulo}">Filme</a>
+            </li>
+        </ul>
+        <a href="/filmes/cadastrar">Cadastrar Novo Filme</a>
+    </body>
+</html>
